@@ -1,0 +1,41 @@
+-
+  type: div
+  settings:
+    enabled: display:already_signed_in
+  attribute:
+    class: alert alert-info
+  innerHTML: Your are already signed in.
+-
+  type: div
+  settings:
+    enabled: display:unknown
+  attribute:
+    class: alert alert-warning
+  innerHTML: Could not find account.
+-
+  type: div
+  settings:
+    enabled: display:out_dated
+  attribute:
+    class: alert alert-warning
+  innerHTML: This url is out dated.
+-
+  type: div
+  settings:
+    enabled: display:used
+  attribute:
+    class: alert alert-warning
+  innerHTML: This url is already used.
+-
+  type: div
+  settings:
+    enabled: display:success
+  attribute:
+    class: alert alert-success
+  innerHTML: You are signed in.
+-
+  type: script
+  settings:
+    enabled: display:success
+  innerHTML: location.href='/';
+  

@@ -1,0 +1,31 @@
+tables:
+  account_auto:
+    field:
+      id:
+        type: varchar(50)
+        not_null: true
+        primary_key: true
+      account_id:
+        type: varchar(50)
+        not_null: true
+        foreing_key:
+          reference_table: account
+          reference_field: id
+          on_delete: CASCADE
+          on_update: CASCADE
+      end_date:
+        type: timestamp
+      used_at:
+        type: timestamp
+extra:
+  field:
+    created_at:
+      type: timestamp
+      default: CURRENT_TIMESTAMP
+    updated_at:
+      type: timestamp
+    created_by:
+      type: varchar(50)
+    updated_by:
+      type: varchar(50)
+           

@@ -1,0 +1,39 @@
+replace:
+account_auto_create_one:
+  sql: |
+    insert into account_auto (id, account_id, end_date, created_by) values (?, ?, ?, '[user_id]');
+  params:
+    -
+      type: s
+      value: rs:id
+    -
+      type: s
+      value: rs:account_id
+    -
+      type: s
+      value: rs:end_date
+account_auto_select_one:
+  sql: |
+    select
+    id,
+    account_id,
+    end_date,
+    used_at
+    from account_auto
+    where id=?
+  params:
+    -
+      type: s
+      value: rs:id
+  select:
+    - id
+    - account_id
+    - end_date
+    - used_at
+account_auto_update_one:
+  sql: |
+    update account_auto set used_at=now(), updated_by='[user_id]' where id=?;
+  params:
+    -
+      type: s
+      value: rs:id
