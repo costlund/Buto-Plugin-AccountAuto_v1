@@ -9,7 +9,7 @@ plugin:
     version: 1.3.0
   -
     name: wf/account2
-    version: 1.11.0
+    version: 1.12.0
 sys:
   -
     name: mercury
