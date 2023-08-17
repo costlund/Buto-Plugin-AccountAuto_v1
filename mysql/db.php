@@ -24,7 +24,7 @@ class db_account_auto{
       foreach ($replace->get() as $key => $value) {
         if(!is_array($value)){
           $temp = $sql->get('sql');
-          $temp = str_replace('['.$key.']', $value, $temp);
+          $temp = wfPhpfunc::str_replace('['.$key.']', $value, $temp);
           $sql->set('sql', $temp);
         }
       }
